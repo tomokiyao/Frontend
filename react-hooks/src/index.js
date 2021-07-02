@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import Counter from './components/Counter';
 import BidirectionalState from './components/bidirectional/BidirectionalState';
+import Form from './components/form/Form';
 
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,6 +15,7 @@ ReactDOM.render(
     <App />
     <Counter />
     <BidirectionalState />
+    <Form />
   </React.StrictMode>,
   document.getElementById('root')
 );
