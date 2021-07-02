@@ -7,6 +7,9 @@ import StatePrac from './components/StatePrac';
 import ClickCountUp from './components/ClickCountUp';
 import Draw from './components/Draw';
 import SampleList from './components/sample/SampleList';
+import Message from './components/Message';
+import Form from './components/Form';
+import ContextApp from './components/sample_context/ContextApp';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -17,9 +20,15 @@ ReactDOM.render(
     <ClickCountUp />
     <Draw />
     <SampleList />
-    <Rect x="200" y="1300" width="200" height="200" color="#6ff9" r="25" />
-    <Rect x="300" y="1400" width="200" height="200" color="#f6f9" r="75" />
-    <Rect x="400" y="1500" width="200" height="200" color="#6669" r="100" />
+    <Message title="Children!">
+      これはコンポーネント内のコンテンツです。
+      丸でテキストを分割し、リストにして表示します。 改行は必要ありません。
+    </Message>
+    <Form />
+    <ContextApp />
+    <Rect x="300" y="2500" width="200" height="200" color="#6ff9" r="25" />
+    <Rect x="400" y="2600" width="200" height="200" color="#f6f9" r="75" />
+    <Rect x="500" y="2700" width="200" height="200" color="#6669" r="100" />
   </React.StrictMode>,
   document.getElementById('root')
 );
