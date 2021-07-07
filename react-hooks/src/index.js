@@ -8,6 +8,7 @@ import BidirectionalState from './components/bidirectional/BidirectionalState';
 import Form from './components/form/Form';
 import SideEffect from './components/side_effect/SideEffect';
 import OriginalHook from './components/original_hook/OriginalHook';
+import Calc from './components/calc/App';
 
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -20,6 +21,7 @@ ReactDOM.render(
     <Form />
     <SideEffect />
     <OriginalHook />
+    <Calc />
   </React.StrictMode>,
   document.getElementById('root')
 );
