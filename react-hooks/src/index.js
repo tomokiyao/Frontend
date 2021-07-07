@@ -6,6 +6,7 @@ import App from './App';
 import Counter from './components/Counter';
 import BidirectionalState from './components/bidirectional/BidirectionalState';
 import Form from './components/form/Form';
+import SideEffect from './components/side_effect/SideEffect';
 
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,6 +17,7 @@ ReactDOM.render(
     <Counter />
     <BidirectionalState />
     <Form />
+    <SideEffect />
   </React.StrictMode>,
   document.getElementById('root')
 );

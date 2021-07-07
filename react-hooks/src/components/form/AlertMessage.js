@@ -8,15 +8,15 @@ const AlertMessage = ({ data }) => {
         <tbody>
           <tr>
             <th>Name</th>
-            {data.name}
+            <td>{data.name}</td>
           </tr>
           <tr>
             <th>Mail</th>
-            {data.mail}
+            <td>{data.mail}</td>
           </tr>
           <tr>
             <th>age</th>
-            {data.age}
+            <td>{data.age}</td>
           </tr>
         </tbody>
       </table>
