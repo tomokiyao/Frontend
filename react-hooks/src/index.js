@@ -9,6 +9,7 @@ import Form from './components/form/Form';
 import SideEffect from './components/side_effect/SideEffect';
 import OriginalHook from './components/original_hook/OriginalHook';
 import Calc from './components/calc/App';
+import LocalStorageTest from './components/local_storage_test/App';
 
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -22,6 +23,7 @@ ReactDOM.render(
     <SideEffect />
     <OriginalHook />
     <Calc />
+    <LocalStorageTest />
   </React.StrictMode>,
   document.getElementById('root')
 );
