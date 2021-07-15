@@ -1,12 +1,7 @@
 import React from 'react';
-import { usePersist } from '../../hooks';
 import Item from './Item';
 
-const Memo = () => {
-  const [memo] = usePersist('memo', []);
-  const [fMemo] = usePersist('findMemo', []);
-  const [mode, setMode] = usePersist('mode', 'default');
-
+const Memo = ({ memo, fMemo, mode }) => {
   let data = [];
 
   switch (mode) {
@@ -26,7 +21,6 @@ const Memo = () => {
       data = memo.map((value, key) => (
         <Item key={key} value={value} index={key + 1} />
       ));
-      setMode('default');
   }
 
   return (

@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
-import { usePersist } from '../../hooks';
 
-const DeleteForm = () => {
-  const [memo, setMemo] = usePersist('memo', []);
+const DeleteForm = ({ memo, setMemo }) => {
   const [num, setNum] = useState(0);
 
   const handleChangeNum = (e) => {
     setNum(e.target.value);
   };
 
-  const doAction = () => {
+  const doAction = (e) => {
     let res = memo.filter((_item, key) => {
       return key !== num;
     });
     setMemo(res);
     setNum(0);
+    e.preventDefault();
   };
 
   let items = memo.map((value, key) => (

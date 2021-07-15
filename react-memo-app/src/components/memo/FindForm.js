@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
-import { usePersist } from '../../hooks';
 
-const FindForm = () => {
-  const [memo] = usePersist('memo', []);
-  const [, setFMemo] = usePersist('findMemo', []);
+const FindForm = ({ setMode, memo, setFMemo }) => {
   const [message, setMessage] = useState('');
-  const [, setMode] = usePersist('mode', 'find');
 
   const handleChange = (e) => {
     setMessage(e.target.value);
@@ -21,6 +17,7 @@ const FindForm = () => {
     });
     setFMemo(res);
     setMode('find');
+    e.preventDefault();
   };
 
   return (

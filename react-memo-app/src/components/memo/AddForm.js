@@ -1,22 +1,21 @@
 import React, { useState } from 'react';
-import { usePersist } from '../../hooks';
 
-const AddForm = () => {
-  const [memo, setMemo] = usePersist('memo', []);
+const AddForm = ({ memo, setMemo }) => {
   const [message, setMessage] = useState('');
 
   const handleChangeMessage = (e) => {
     setMessage(e.target.value);
   };
 
-  const doAction = () => {
+  const doAction = (e) => {
     const data = {
       message: message,
       created: new Date(),
     };
-    memo.unshift(data);
-    setMemo(memo);
+    let res = [data, ...memo];
+    setMemo(res);
     setMessage('');
+    e.preventDefault();
   };
 
   return (
